@@ -7,7 +7,7 @@
   "icon": "./icon.svg",
   "files": ["icon.svg", "cordis.patch.yml", "dsh/index.js", "src/client.js", "native/NotificationApp.swift", "scripts/build.ts", "scripts/cli.js", "README.md", "docs/zh.md"],
   "type": "module",
-  "exports": { ".": "./dsh/index.js", "./client": "./src/client.js" },
+  "exports": { ".": "./dsh/index.js", "./client": "./src/client.js", "./package.json": "./package.json" },
   "scripts": { "build": "bun run scripts/build.ts", "test": "node --test test/*.test.js" },
   "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
 }

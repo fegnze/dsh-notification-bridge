@@ -14,6 +14,17 @@ test('renamed package preserves component identity and config', () => {
   assert.match(patch, /sessionEvents: true/)
 })
 
+test('host can resolve package metadata and its packaged icon', async () => {
+  const { createRequire } = await import('node:module')
+  const require = createRequire(import.meta.url)
+  const manifest = require.resolve('dsh-notification-bridge/package.json')
+  const pkg = JSON.parse(readFileSync(manifest, 'utf8'))
+  assert.equal(pkg.exports['./package.json'], './package.json')
+  assert.equal(pkg.icon, './icon.svg')
+  assert.ok(pkg.files.includes('icon.svg'))
+  assert.match(readFileSync(new URL(pkg.icon, new URL('../package.json', import.meta.url)), 'utf8'), /<svg\s/)
+})
+
 test('notification subject never displays session IDs, including after restart', () => {
   const session = { id: 'session-long-uuid', events: [{ type: 'session/title', data: { title: '修复通知主题' } }] }
   assert.equal(notificationSubject(session, {}), '修复通知主题')
