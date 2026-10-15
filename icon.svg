@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <defs>
+    <linearGradient id="body" x1="61" y1="37" x2="191" y2="222" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00E5FA"/><stop offset=".34" stop-color="#37BDFA"/><stop offset=".61" stop-color="#A2A5FA"/><stop offset=".82" stop-color="#EAC8FA"/><stop offset="1" stop-color="#FFF5F5"/>
+    </linearGradient>
+    <radialGradient id="pearl" cx="0" cy="0" r="1" gradientTransform="translate(168 161) rotate(45) scale(91 60)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1FF" stop-opacity=".9"/><stop offset="1" stop-color="#FFF1FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="edge" x1="49" y1="38" x2="198" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A3FFFF"/><stop offset=".45" stop-color="#65BFFF"/><stop offset=".74" stop-color="#ECD3FF"/><stop offset="1" stop-color="white"/>
+    </linearGradient>
+    <filter id="glass" x="-12%" y="-12%" width="124%" height="124%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.2" result="blur"/>
+      <feFlood flood-color="#7F9BFF" flood-opacity=".45"/><feComposite in2="blur" operator="in" result="glow"/>
+      <feOffset in="SourceAlpha" dx="3" dy="4" result="offset"/><feGaussianBlur in="offset" stdDeviation="5"/>
+      <feComposite in="SourceAlpha" operator="out" result="rim"/><feFlood flood-color="#F3FFFF" flood-opacity=".9"/><feComposite in2="rim" operator="in" result="light"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/><feMergeNode in="light"/></feMerge>
+    </filter>
+    <path id="bell" d="M111 44C111 24 145 24 145 44V49C177 57 195 82 195 118V137Q195 156 214 174Q229 191 209 199Q187 205 153 205C151 233 105 233 103 205Q69 205 47 199Q27 191 42 174Q61 156 61 137V118C61 82 79 57 111 49Z"/>
+  </defs>
+  <g filter="url(#glass)">
+    <use href="#bell" fill="url(#body)"/><use href="#bell" fill="url(#pearl)"/>
+    <use href="#bell" stroke="url(#edge)" stroke-width="2.5"/>
+    <path d="M88 192Q128 199 168 192" stroke="#AC9CE8" stroke-opacity=".38" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>
