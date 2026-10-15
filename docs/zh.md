@@ -1,6 +1,6 @@
 # dsh-notification-bridge — 本地 macOS 通知桥
 
-[English](README.md) | [中文](README.zh.md)
+[English](../README.md) | [中文](zh.md)
 
 独立 DSH host 插件 `dsh-notification-bridge`；不修改 DSH 源码、preload、签名或内部 IPC。原生 Swift Helper 是本插件的发送后端，不是 DSH 分支。
 

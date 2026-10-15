@@ -1,6 +1,6 @@
 # dsh-notification-bridge — Local macOS notification bridge
 
-[English](README.md) | [中文](README.zh.md)
+[English](README.md) | [中文](docs/zh.md)
 
 An independent DSH host plugin, `dsh-notification-bridge`, that does not modify DSH source, preload, signatures, or internal IPC. Its native Swift Helper is the plugin's delivery backend, not a DSH fork.
 
