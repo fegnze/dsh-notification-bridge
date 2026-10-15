@@ -1,0 +1,5 @@
+- insert:
+    - id: myspace-notification-bridge
+      name: dsh-notification-bridge
+      config:
+        sessionEvents: true

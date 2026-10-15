@@ -1,0 +1,12 @@
+{
+  "name": "dsh-notification-bridge",
+  "version": "0.1.0",
+  "license": "Zlib",
+  "description": "Local macOS notification bridge for DeepSeek Harness",
+  "repository": { "type": "git", "url": "git+https://github.com/fegnze/dsh-notification-bridge.git" },
+  "files": ["cordis.patch.yml", "dsh/index.js", "src/client.js", "native/NotificationApp.swift", "scripts/build.ts", "scripts/cli.js"],
+  "type": "module",
+  "exports": { ".": "./dsh/index.js", "./client": "./src/client.js" },
+  "scripts": { "build": "bun run scripts/build.ts", "test": "node --test test/*.test.js" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}
